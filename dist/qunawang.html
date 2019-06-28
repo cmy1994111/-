@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/qunali.css"/>
+		<script src="js/jquery-1.11.0.js"></script>
+	</head>
+	<body>
+		<div class="top-banner">
+			<div class="top-center">
+				<img class="logo" src="img/1 - logo.png">
+				<ul class="top-left-top">
+					<li><sapn>请</sapn><a href="#" class="teshu">登陆</a><span>或</span><a href="#" class="teshu">免费注册</a><span>|</span></li>
+					<li><span></span><a>消息</a><span>|</span></li>
+					<li><a href="#" id="teshu1">查看订单</a><span></span><span>|</span></li>
+					<li><a href="#">积分商城</a><span>|</span></li>
+					<li><a href="#">联系客服</a></li>
+				</ul>
+				<ul id="top-left-xiala" class="active">
+					<li><a href="">电话订单</a></li>
+					<li><a href="">电话订单</a></li>
+					<li><a href="">电话订单</a></li>
+					<li><a href="">电话订单</a></li>
+					<li><a href="">电话订单</a></li>
+				</ul>
+				<ul class="top-bottom">
+					<li><a href="">首页</a></li>
+					<li><a href="">机票</a></li>
+					<li><a href="">酒店</a></li>
+					<li class="top-bottom-tuangou" id="top-show-list"><a href="">团购</a></li>
+					<li><a href="">度假</a></li>
+					<li><a href="">邮轮</a></li>
+					<li><a href="">门票</a></li>
+					<li><a href="">火车票</a></li>
+					<li><a href="">攻略</a></li>
+					<li><a href="">当地人</a></li>
+					<li><a href="">车车</a></li>
+					<li><a href="">汽车票</a></li>
+					<li><a href="">境外</a></li>
+					<li><a href="">保险</a></li>
+					<li><a href="">金融</a></li>
+				</ul>
+				<ul id="top-bottom-youhui"class="attr">
+					<li><a href="#">优惠团购</a></li>
+					<li><a href="#">优惠团购</a></li>
+					<li><a href="#">优惠团购</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--头部完结-->
+		<div class="content">
+			<div class="content-left">
+				<div class="content-liebiao">
+				<ul id="liebiao" >
+					<li><a href="">机票</a></li>
+					<li><a href="">酒店</a></li>
+					<li><a href="">火车票</a></li>
+					<li><a href="">度假</a></li>
+					<li><a href="">门票</a></li>
+					<li><a href="">团购</a></li>
+					<li><a href="">车车</a></li>
+					<li><a href="">自由行</a></li>
+				</ul>
+				<div class="xiangqing">
+					<div class="xiangqing-shang">
+						<ul>
+							<li><a href="#">国内机票</a></li>
+							<li><a href="#">国际.港澳台机票</a></li>
+						</ul>
+						<ul class="clearfix-left">
+							<li><a href="#"><span><</span>出票状态查询</a></li>
+							<li><a href="#"><span>></span>退票改签</a></li>
+						</ul>
+					</div>
+					<div class="xiangqing-zhong">
+						<div class="xia">
+						<form class="shijianbiao">
+							<input type="radio" name="radio" value="1">单程
+							<input type="radio" name="radio" value="2">往返
+							<input type="text" />
+							<input type="text" />
+							<input type="text" />
+							<input type="text" />
+						</form>
+						<p>可实时搜索28万条国内国际航线</p>
+						<a  href="#" style="display:block;width: 131px;height:38px;background:orangered;text-align: center;line-height: 38px;font-size: 18px;color: #fff;position: absolute;left:437px;top:151px;border-radius: 5px;">立即搜索</a>
+					</div>
+					</div>
+					<div class="xiangqing-xia">
+						<ul>
+							<li><a href="#">全程预定保障-去哪都放心</a><span>|</span></li>
+							<li><a href="#">正规商家</a><span>|</span></li>
+							<li><a href="#">支付安全</a><span>|</span></li>
+							<li><a href="#">售后无忧</a></li>
+						</ul>
+					</div>
+				</div>
+				</div>
+				
+			
+			
+			
+			
+			
+			
+			<div class="content-right">
+				<img src="img/guanggao.jpg">
+			</div>
+		</div>
+		<script src="js/qunale.js"></script>
+		<script>
+			$(function(){
+			$("#teshu1").hover(function(){
+				$("#top-left-xiala").removeClass("active")
+			},function(){
+				$("#top-left-xiala").addClass("active")
+			});
+			$(".top-bottom-tuangou").hover(function(){
+				
+				$("#top-bottom-youhui").removeClass("attr")
+			},function(){
+				$("#top-bottom-youhui").addClass("attr")
+			})
+			$("#top-bottom-youhui").hover(function(){
+				$("#top-bottom-youhui").addClass("attr")
+			},function(){
+				$("#top-bottom-youhui").removeClass("attr")
+			})
+			})
+			
+		</script>
+	</body>
+</html>

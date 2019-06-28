@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/denglu1.css"/>
+		<script src="js/jquery-1.11.0.js"></script>
+		
+	</head>
+	<body>
+		<div class="denglu">
+			<div class="denglu-top">
+			<ul>
+				<li><a href="#"style="color: gray;">登陆</a></li>
+				<li><a href="#"style="padding:0 10px;color: gray;">注册</a><span>|</span></li>
+				<li><a href="#"style="padding:0 10px;color: red;">去哪儿网首页</a><span>|</span></li>
+				<li><a href="#"style="padding:0 10px;color: gray;">联系客服</a></li>
+			</ul>	
+		</div>
+		</div>
+		<div class="denglu-logo">
+			<div class="logo"style="float: left;"><img src="img/logo.png"></div>
+			<div class="logo-denglu" style="float: left;font-size: 20px;margin-left: 10px;">账号登陆</div>
+		</div>
+		<div class="require">
+			<div class="require-left">
+				<div class="require-left-img"style="margin:32px 0 0 65px;float: left;"><img src="img/bg.png"></div>
+				<div class="require-font"style="float: left;">
+					<h2 style="margin-top: 61px;margin-left: 27px;color: #009bb3;font-size: 20px;">使用去哪客户端</h2>
+					<h2 style="margin-left: 27px;color: #009bb3;font-size: 20px;">手机扫描安全登陆</h2>
+					<p style="margin-left: 27px;margin-top: 12px;font-size: 12px;color: #999;"> 1. 打开手机去哪儿客户端并登录去哪儿账号</p>
+					<p style="margin-left: 27px;font-size: 12px;color: #999;">2. 在去哪儿登录页点击右上角扫码安全登录</p>
+					<p style="margin-left: 27px;font-size: 12px;color: #999;">3. 使用去哪儿客户端左上角扫描功能完成登录 </p>
+				</div>
+			</div>
+		<div class="require-right">
+			<div class="require-right-middle"style="text-align: center;">
+				<!--<input type="radio" name="32" value="" id="danxuan1"  /><span style="font-size: 15px;">账号登陆</span>
+				<input type="radio" name="32" value="" id="danxuan2"/><span style="font-size: 15px;">短信验证码登陆</span>-->
+				<input type="text"  id="username" placeholder="用户名/手机号/邮箱" style="width: 247px;height: 29px;margin: 19px 0;"/ onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+				<input type="text"  id="password" placeholder="请输入密码" style="width: 247px;height: 29px;"onkeyup="value=value.replace(/[^\w\.\/]/ig,'')">
+				<!--<input type="text" style="width: 144px;height: 28px;margin-top: 18px;"placeholder="请输入验证码"id="yanzhen"/>
+				<input type="text" style="width: 81px;height: 28px;margin-top: 18px;" id="inputval"/><br />-->
+				<input type="radio" name="33" value=""style="float: left;margin-top: 20px;"/><span style="float: left;margin-top: 18px;margin-left: 10px;">三个月免登录</span>
+				<a style="margin-top:18px;margin-left:10px;display: block;float: left;cursor: pointer;">忘记密码<span style="padding-left: 10px;">|</span></a><a style="padding-left:10px;margin-top:18px;display: block;float: left;">注册账号</a>
+				<input type="button" value="登录"id="login" style="width: 248px;height: 30px;margin-top: 19px;background: orange;font-size: 20px;line-height: 30px;outline:none ;" />
+				
+				
+			</div>
+		</div>
+		</div>
+		<script >
+//			var Yanzheng =document.getElementById("yanzheng")
+//			var Input = document.getElementById("inputval")
+//			console.log(Input)
+//			console.log(Yanzheng)
+//	$(document).ready(function(){
+//  //循环执行，每隔1秒钟执行一次 1000 
+//  var t1=window.setInterval(refreshCount, 10000);
+//
+//  function refreshCount() {
+//    var num = Math.ceil(Math.random()*10000);
+//    Input.value = num
+//  }   
+// });
+   
+//		var btn =document.querySelectorAll(".logo-denglu")
+// btn.onclick=function(){
+//              if (puseD == 1 && pusedM == 1 && pusedN == 1) {
+//						console.log(1)
+//                  $.post("http://47.104.244.134:8080/userlogin.do",{name:$("#username").val(),
+//                  password:$("#password").val()}).done(data=>{
+//                      console.log(data);
+//                     
+//                      if(data.code == 0){
+//                      	localStorage.setItem("token",data.data.token)
+//                      	console.log(data.data.token)
+//                   window.location.href = "dex.html";
+//                          
+//                          
+//                      }else{
+//                          alert("用户名不存在")
+//                      }
+//
+//                  })
+//          
+//                  }}
+		</script>
+		<script src="js/denglu1.js"></script>
+		
+		
+	</body>
+</html>

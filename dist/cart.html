@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>详情</title>
+		<link rel="stylesheet" type="text/css" href="cart.css"/>
+		<script src="js/jquery-1.11.0.js"></script>
+	</head>
+	<body>
+		<div class="cart">
+			<!--<dl>
+				<dt><img src="img/henan.jpg"></dt>
+				<dd>
+					<h2>郑州一日游</h2>
+					<p>￥<a>20</a>起</p>
+					<input type="button" value="添加购物车" />
+				</dd>
+			</dl>-->
+			<script type="text/javascript">
+				var str = "";
+				function GetRequest(){
+					var url = location.search;
+					var theRequest =new Object();
+					if(url.indexOf("?")!=-1){
+						 str = url.substr(4);
+						console.log(str)
+					}
+				}
+				GetRequest()
+				$.get("http://47.104.244.134:8080/goodsbyid.do",{id:str},function(res){
+					console.log(res)
+					$(".cart").append(`
+						<dl>
+				<dt><img src= "http:${res.picurl}"></dt>
+				<dd>
+					<h2>${res.name}</h2>
+					<p>￥<a>${res.price}</a>起</p>
+					<a href="gouwuche.html" onclick="add()">添加购物车</a>
+				</dd>
+			</dl>
+					`)
+				})
+				function add()
+				{
+					var oyu = localStorage.getItem("token")
+					$.get("http://47.104.244.134:8080/cartsave.do",{gid:str,token:oyu},function(res){
+						console.log(res)
+						
+					})
+				}
+			</script>
+		</div>
+	</body>
+</html>

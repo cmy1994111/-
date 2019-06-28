@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.11.0.js"></script>
+	</head>
+
+	<body>
+		<div class="cart">
+			<!--<dl>
+				<dt><img src="img/henan.jpg"></dt>
+				<dd>
+					<h2>郑州一日游</h2>
+					<p>￥<a>20</a>起</p>
+					<a>+</a><input type="text" /><a>-</a>
+				</dd>
+			</dl>-->
+		</div>
+	</body>
+	<script type="text/javascript">
+		var oyu = localStorage.getItem("token")
+		$.get("http://47.104.244.134:8080/cartlist.do", {
+			token: oyu
+		}, function(res) {
+			var vat = res;
+			console.log(res)
+			for(let i = 0; i < res.length; i++) {
+				console.log(vat[i])
+				$(".cart").append(`
+				
+			<dl>
+				<dt><img src= "http:${vat[i].goods.picurl}"></dt>
+				<dd>
+					<h2></h2>
+					<p>￥<a>20</a>起</p>
+					<a class="minues">-</a>
+					<input type="text" value="${vat[i].count}" class="num"/>
+					<a id="jian">+</a>
+					<a href="index.html">前往首页</a>
+				</dd>
+			</dl>	
+			
+			`)
+			}
+		})
+		$(".cart").on("click", ".minues", function(evt) {
+			console.log(123)
+			let aaa = $(evt.currentTarget)[0];
+			console.log($(aaa).next().val());
+			var numVal = $(aaa).next().val();
+			console.log(numVal)
+			$(aaa).next().val(numVal - 1)
+			console.log(numVal)
+			if(numVal <= 1) {
+				console.log("aaa")
+				$(aaa).next().val(1);
+			}
+		})
+		$(".cart").on("click","#jian",function(eve){
+			let bbb = $(eve.currentTarget)[0];
+			var numVal = $(bbb).prev().val()
+			$(bbb).prev().val(parseInt(numVal) + 1)
+		})
+	</script>
+
+</html>
