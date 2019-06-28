@@ -18,7 +18,11 @@
 				</dd>
 			</dl>-->
 		</div>
+		<span >
+			总和：
+		</span><span class="sum"></span>
 	</body>
+	
 	<script type="text/javascript">
 		var oyu = localStorage.getItem("token")
 		$.get("http://47.104.244.134:8080/cartlist.do", {
@@ -34,16 +38,27 @@
 				<dt><img src= "http:${vat[i].goods.picurl}"></dt>
 				<dd>
 					<h2></h2>
-					<p>￥<a>20</a>起</p>
+					<p class="pirce">￥<a id="val">${vat[i].goods.price}</a>起</p>
 					<a class="minues">-</a>
 					<input type="text" value="${vat[i].count}" class="num"/>
 					<a id="jian">+</a>
 					<a href="index.html">前往首页</a>
+					</br>
+					<span>总价:</span>
+					<span class="sums">${vat[i].goods.price*vat[i].count}</span>
 				</dd>
 			</dl>	
 			
 			`)
 			}
+			var sun =0;
+//		console.log($(".sums").index(0).text())
+//		console.log($(".sums").length)
+		$(".sums").each(function(i,n){
+			console.log($(this).text())
+			sun+=$(this).text()*1
+		})
+	 $(".sum").text(sun)
 		})
 		$(".cart").on("click", ".minues", function(evt) {
 			console.log(123)
@@ -57,12 +72,14 @@
 				console.log("aaa")
 				$(aaa).next().val(1);
 			}
+			console.log(evt.$(".sums"))
 		})
 		$(".cart").on("click","#jian",function(eve){
 			let bbb = $(eve.currentTarget)[0];
 			var numVal = $(bbb).prev().val()
 			$(bbb).prev().val(parseInt(numVal) + 1)
 		})
+		
 	</script>
 
 </html>
